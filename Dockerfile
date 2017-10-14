@@ -14,7 +14,7 @@ RUN cd $GOPATH/src/github.com/jteeuwen/go-bindata/go-bindata && go install
 RUN mkdir -p $GOPATH/src/github.com/apex
 
 RUN cd $GOPATH/src/github.com/apex \
-    && git clone -b shell_env_var_substituion https://github.com/selvakn/up
+    && git clone -b dotenv https://github.com/selvakn/up
 
 RUN cd $GOPATH/src/github.com/apex/up \
     && dep ensure
