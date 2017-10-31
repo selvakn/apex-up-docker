@@ -5,11 +5,11 @@ RUN \
   && apt-get update \
   && apt-get install git-lfs
 
-RUN go get github.com/golang/dep/cmd/dep
+RUN curl -sL https://github.com/golang/dep/releases/download/v0.3.2/dep-linux-amd64 > /go/bin/dep
+RUN chmod +x /go/bin/dep
 
 # Install go-bindata
-RUN go get github.com/jteeuwen/go-bindata
-RUN cd $GOPATH/src/github.com/jteeuwen/go-bindata/go-bindata && go install
+RUN go get -u github.com/jteeuwen/go-bindata/...
 
 RUN mkdir -p $GOPATH/src/github.com/apex
 
