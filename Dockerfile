@@ -19,4 +19,4 @@ RUN cd $GOPATH/src/github.com/apex \
 RUN cd $GOPATH/src/github.com/apex/up \
     && dep ensure
 RUN cd $GOPATH/src/github.com/apex/up \
-    && make install
+    && make install.deps build install
